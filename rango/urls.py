@@ -3,8 +3,7 @@ from rango import views
 
 urlpatterns=[
     path('', views.index, name= 'index'),
-<<<<<<< HEAD
-    path("about/" views.about, name='about'),
-=======
->>>>>>> main
+
+    path('about/', views.about, name='about'),
+
 ]
