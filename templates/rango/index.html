@@ -1,3 +1,6 @@
+
+{%load staticfiles%}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,9 +17,22 @@
             <strong>{{boldmessage}}</strong>
         </div>
         <div>
-            <a href="/rango/about/">about</a><br/>
-            <img scr = "{%static "
+            {% if categories %}
+            <ul>
+                {% for category in categories %}
+                <li>{{category.name}}</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+                <strong> there are no categories.</strong>
+            {% endif %}
         </div>
+        <div>
+            <a href="/rango/about"About></a><br />
+            <img src="{st"
+            alt="picture of python"/>
+        </div>
+        
     </body>
         
         
